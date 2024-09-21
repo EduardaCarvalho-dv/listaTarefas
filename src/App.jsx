@@ -51,7 +51,7 @@ function App() {
 
       <div className="tarefaCompleta" key={tarefa.id}>
         <li>
-          {interSec[tarefa.userId]} - <strike> {tarefa.title} </strike>
+          {interSec[tarefa.userId]}, <strike> {tarefa.title} </strike>
         </li>
       </div>
 
@@ -63,7 +63,7 @@ function App() {
 
       <div className="tarefaPendente" key={tarefa.id}>
         <li>
-          {interSec[tarefa.userId]} - {tarefa.title}
+          {interSec[tarefa.userId]}, {tarefa.title}
         </li>
       </div>
 
