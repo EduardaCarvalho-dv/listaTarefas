@@ -8,15 +8,32 @@
 .tarefasCompletas{
   background-color: #201616;
   padding: 15px;
+  cursor: default;
 }
 
 .tarefasPendentes{
   background-color: #5b3434;
   padding: 15px;
+  cursor: pointer;
 }
 
 .tarefaCompleta, .tarefaPendente{
   text-align: justify;
   padding: 0.5rem;
-  border: 1.5px dashed #ffffffdb;
+  border: 1.5px solid #ffffffdb;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+}
+
+.title{
+  font-weight: bold;
+  font-size: large;
+}
+
+.task:hover{
+  background-color: rgb(48, 24, 24);
+}
+
+.textStrike{
+  text-decoration: line-through;
 }
