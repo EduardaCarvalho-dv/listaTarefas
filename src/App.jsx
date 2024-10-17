@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 
 import "./App.css";
+import { TarefasCompletas, TarefasIncompletas } from './componentes/Tarefa';
 
 function App() {
   
@@ -56,27 +57,18 @@ function App() {
 
   };
 
-
   const divTarefasCompletas = () =>
 
     tarefasCompletas.map((tarefa) => (
-
-      <div className="tarefaCompleta task" key={tarefa.id}>
-          <p className="textStrike title">{tarefa.title}</p>
-          <p>{interSec[tarefa.userId]}~</p> 
-      </div>
-
+  
+      <TarefasCompletas key={tarefa.id} tarefa={tarefa} userName={interSec[tarefa.userId]}/>
     ));
 
   const divTarefasIncompletas = () =>
 
     tarefasIncompletas.map((tarefa) => (
 
-      <div className="tarefaPendente task" key={tarefa.id} onClick={() => completarTarefa(tarefa.id)}>
-          <p className="title">{tarefa.title}</p>
-          <p>{interSec[tarefa.userId]}~</p>
-      </div>
-
+      <TarefasIncompletas key={tarefa.id} tarefa={tarefa} userName={interSec[tarefa.userId]} completarTarefa={completarTarefa}/>
     ));
 
   return (
